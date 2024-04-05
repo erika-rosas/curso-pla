@@ -1,4 +1,4 @@
-name: Triggers v2
+name: TriggersV2
 run-name: ¡Estoy aprendiendo a usar triggers v2!
 on:
   push:
