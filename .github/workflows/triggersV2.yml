@@ -31,7 +31,7 @@ on:
         description: "Tu edad es:"
         required: true
         default: 20
-        type: integer
+        type: number
   schedule:
     - cron: "15 22 * * *"
 jobs:
@@ -58,14 +58,13 @@ jobs:
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
         run: python hola_mundo.py
-  hola-mundo-edad: 
+  hola-mundo-edad:
     if: ${{ inputs.edad >= 18 }}
     runs-on: ubuntu-latest
-     steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr hola mundo
         run: python hola_mundo.py
-
