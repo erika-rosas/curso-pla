@@ -57,7 +57,7 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python hola_mundo.py
+        run: python main.py
   hola-mundo-edad:
     if: ${{ inputs.edad >= 18 }}
     runs-on: ubuntu-latest
@@ -67,4 +67,4 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr hola mundo
-        run: python hola_mundo.py
+        run: python main.py
